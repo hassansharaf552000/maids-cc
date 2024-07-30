@@ -1,0 +1,23 @@
+<h1>Student Dashboard</h1>
+<app-header></app-header>
+@if (loading) {
+<div class="loading-bar">
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+}
+<div class="row">
+  @for (student of students; track student) {
+  <div class="col-md-4">
+    <div class="card" appHighlight (click)="viewStudentDetails(student.id)">
+      <img [src]="student.avatar" class="card-img-top" alt="{{ student.first_name }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ student.first_name }} {{ student.last_name }}</h5>
+      </div>
+    </div>
+  </div>
+  }
+</div>
+<div class="pagination-buttons">
+  <button class="btn btn-primary custom" (click)="previousPage()" [disabled]="page === 1">Previous</button>
+  <button class="btn btn-primary custom" (click)="nextPage()" [disabled]="page === totalPages">Next</button>
+</div>

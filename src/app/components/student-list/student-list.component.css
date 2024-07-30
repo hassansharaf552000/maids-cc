@@ -1,0 +1,23 @@
+/* student-list.component.css */
+.loading-bar {
+  margin-bottom: 20px;
+}
+
+.pagination-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.card {
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  background-color: #f8f9fa;
+}
+
+.custom {
+  background-color: #6a1b9a;
+}
